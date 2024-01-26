@@ -1,0 +1,28 @@
+.separator{
+  background: #17191c;
+  overflow: hidden;
+}
+.separator__container {
+  min-width: 363px;
+  height: 100%;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+
+}
+.separator__title {
+  font-weight: 700;
+  font-size: 48px;
+  line-height: 65px;
+  color: #ffffff;
+  max-width: 383px;
+}
+.separator__img{
+  position: relative;
+  bottom: -113px;
+    right: 61px;
+    transform: scale(1.7);
+    max-height: 363px;
+}

@@ -1,0 +1,36 @@
+/* Partners */
+.partners{
+    background:#F4F5F5;
+    padding: 88px 0 110px;
+  }
+  .partners__title {
+    font-weight: 700;
+    font-size: 48px;
+    line-height: 65px;
+    margin-bottom: 25px;
+  }
+  
+  .partners__list {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
+  
+  .partners__item {
+    margin-right: 46px;
+    margin-top: 49px;
+    min-width: 200px;
+  }
+  .partners__item:nth-child(4n + 4){
+    margin-right: 0;
+  }
+  .partners__link {
+    display: block;
+    filter: grayscale(1);
+  }
+  .partners__link:hover{
+    filter: grayscale(0);
+ 
+  }
+  

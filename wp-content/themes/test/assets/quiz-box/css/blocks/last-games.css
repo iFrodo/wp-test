@@ -1,0 +1,69 @@
+.last-games{
+    margin-bottom:146px ;
+  }
+  .last-games__main-title {
+    font-weight: 700;
+    font-size: 36px;
+    line-height: 49px;
+    margin-bottom: 51px;
+  }
+  
+  .last-games__list {
+    display: flex;
+    justify-content: space-around;
+  }
+  
+  .last-games__item {
+    margin-right: 19px;
+    border-radius: 5px;
+    overflow: hidden;
+    margin-bottom: 47px;
+    opacity: 0.8;
+    transition: 0.3s;
+  }
+  .last-games__item:hover{
+    opacity: 1;
+    transform: scale(1.05);
+  
+
+  }
+  
+  .last-games__item:last-child {
+    margin-right: 0;
+  }
+  
+  .last-games__card {
+    display: block;
+  }
+  
+  .last-games__card:hover {
+    color: inherit;
+  }
+  
+  .last-games__content__box {
+    position: absolute;
+    bottom: 79px;
+    padding: 20px 28px;
+    min-height: 166px;
+  }
+  
+  .last-games__desc {
+    color: #ffffff;
+    font-size: 16px;
+    line-height: 21px;
+    max-width: 477px;
+  }
+  
+  .last-games__title {
+    font-weight: 700;
+    font-size: 24px;
+    line-height: 36px;
+    margin-bottom: 5px;
+  }
+  
+  .last-games__date {
+    font-size: 16px;
+    line-height: 21px;
+    margin-bottom: 12px;
+    display: block;
+  }

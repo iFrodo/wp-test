@@ -1,0 +1,12 @@
+.breadcrumps__list {
+    display: flex;
+    align-items: center;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 19px;
+    text-decoration-line: underline;
+  }
+  
+  .breadcrumps__item {
+    color: #9a9a9a;
+  }
