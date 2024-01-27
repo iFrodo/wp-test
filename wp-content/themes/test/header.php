@@ -14,7 +14,8 @@
         <section class="hero">
             <header class="header">
                 <div class="container header__container">
-                    <a href="http://test.loc/?page_id=23" class="logo header__logo">Quiz-box
+                    <?php the_custom_logo()?>
+                    <a href="http://test.loc/?page_id=8" class="logo header__logo">Quiz-box
                     </a>
                     <nav class="nav-bar header__nav-bar">
                         <ul class="menu">
@@ -22,15 +23,15 @@
                                 <a class="menu__link active" href="./assets/quiz-box/main.html">Главная</a>
                             </li>
                             <li class="menu__item">
-                                <a class="menu__link" href="http://test.loc/?page_id=18">Игры</a>
+                                <a class="menu__link" href="http://test.loc/?page_id=12">Игры</a>
                             </li>
                             <li class="menu__item">
-                                <a class="menu__link" href="./assets/quiz-box/reviews.html">Отзывы</a>
+                                <a class="menu__link" href="http://test.loc/?page_id=14">Отзывы</a>
                             </li>
                         </ul>
                     </nav>
                     <address class="contacts header__contacts games__contacts">
-                        <a href="tel:88007003030" class="contacts__phone">8 800 700 30 30</a>
+                        <a href="<?php the_field('telefon') ?>" class="contacts__phone"><?php the_field('telefon') ?></a>
                         <p class="contacts__shedule">График работы
                         </p>
                         <ul class='submenu'>

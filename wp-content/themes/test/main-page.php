@@ -34,41 +34,34 @@ Template Post Type: post, page, product
                         foreach ($myposts as $post) {
                             setup_postdata($post);
                     ?>
-                           
+
 
                             <li class="week-news__item">
                                 <div class="week-news__header">
-                                    <img src="<?php bloginfo('template_url') ?>/assets/quiz-box/img/music-quiz1.png" alt="" class="week-news__img week-news_object-position">
+                                    <?php the_post_thumbnail(array(362, 144), array('class' => 'week-news__img week-news_object-position')); ?>
+
                                 </div>
                                 <div class="week-news__content">
-                                    <h3 class="week-news__title"><?php the_title()?></h3>
+                                    <h3 class="week-news__title"><?php the_title() ?></h3>
                                     <ul class="week-news__features">
                                         <li class="week-news__features-item">
                                             <img src="<?php bloginfo('template_url') ?>/assets/quiz-box/img/svg/clock.svg" alt="" class="week-news__features-ico">
-                                            <div class="week-news__features-text"><?php print_r($posts)?></div>
+                                            <div class="week-news__features-text"><?php the_field('game_time') ?></div>
                                         </li>
                                         <li class="week-news__features-item">
                                             <img src="<?php bloginfo('template_url') ?>/assets/quiz-box/img/svg/qa.svg" alt="" class="week-news__features-ico">
-                                            <div class="week-news__features-text">70 вопросов</div>
+                                            <div class="week-news__features-text"><?php the_field('questions_quantity') ?></div>
                                         </li>
                                     </ul>
-                                    <p class="week-news__desc">
-                                        Равным образом постоянное обеспечение нашей деятельности позволяет оценить значение
-                                        систем массового участия.
-                                    </p>
+                                    <div class="week-news__desc">
+                                        <?php the_content() ?>
+                        </div>
                                     <button class="week-news__button btn btn--theme-bordered">Смотреть</button>
                                 </div>
                             </li>
-
-
-
-
-
-
                     <?php
                         }
                     }
-
                     wp_reset_postdata(); // Сбрасываем $post
                     ?>
 

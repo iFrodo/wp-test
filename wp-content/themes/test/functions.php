@@ -14,6 +14,13 @@ add_theme_support('post-thumbnails');
 add_theme_support( 'title-tag' );
 add_theme_support( 'custom-logo');
 
+add_filter( 'upload_mimes', 'svg_upload_allow' );
 
+# Добавляет SVG в список разрешенных для загрузки файлов.
+function svg_upload_allow( $mimes ) {
+	$mimes['svg']  = 'image/svg+xml';
+
+	return $mimes;
+}
 
 ?>
