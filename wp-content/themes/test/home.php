@@ -12,7 +12,7 @@ Template Post Type: post, page, product
         <div class="welcome__content">
             <a href="#" class="logo welcome__logo">Quiz-box
             </a>
-            <a href="http://test.loc/?page_id=10" class="btn welcome__btn">Войти</a>
+            <a href="http://test.loc/?page_id=8" class="btn welcome__btn">Войти</a>
 
 
         </div>

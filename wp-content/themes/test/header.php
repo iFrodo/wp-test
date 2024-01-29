@@ -1,11 +1,11 @@
 <!DOCTYPE html>
-<html lang="<?php language_attributes()?>">
+<html lang="<?php language_attributes() ?>">
 
 <head>
-    <meta charset="<?php bloginfo('charset')?>">
+    <meta charset="<?php bloginfo('charset') ?>">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<?php wp_head(); ?>
+    <?php wp_head(); ?>
     <title>Quiz-box</title>
 </head>
 
@@ -14,8 +14,8 @@
         <section class="hero">
             <header class="header">
                 <div class="container header__container">
-                    <?php the_custom_logo()?>
-                    <a href="http://test.loc/?page_id=8" class="logo header__logo">Quiz-box
+                    <?php the_custom_logo() ?>
+                    <a href="http://test.loc/" class="logo header__logo">Quiz-box
                     </a>
                     <nav class="nav-bar header__nav-bar">
                         <ul class="menu">
@@ -30,14 +30,26 @@
                             </li>
                         </ul>
                     </nav>
-                    <address class="contacts header__contacts games__contacts">
-                        <a href="<?php the_field('telefon') ?>" class="contacts__phone"><?php the_field('telefon') ?></a>
-                        <p class="contacts__shedule">График работы
-                        </p>
-                        <ul class='submenu'>
-                            <li class="submenu__work-time">пн-вс: 09:00 - 20:00</li>
-                            <li class="submenu__lanch">Обед: 14:00-14:30</li>
-                        </ul>
-                    </address>
+                    <?php
+                    global $post;
+
+                    $myposts = get_posts('numberposts=1&category=5');
+
+                    if (!empty($myposts)) {
+                        $post = $myposts[0];
+                    ?>
+
+                        <address class="contacts header__contacts games__contacts">
+                            <a href="<?php the_field('telefon') ?>" class="contacts__phone"><?php the_field('telefon') ?></a>
+                            <p class="contacts__shedule">График работы
+                            </p>
+                            <ul class='submenu'>
+                                <li class="submenu__work-time">пн-вс: 09:00 - 20:00</li>
+                                <li class="submenu__lanch">Обед: 14:00-14:30</li>
+                            </ul>
+                        </address>
+                    <?php
+                    }
+                    ?>
                 </div>
             </header>
